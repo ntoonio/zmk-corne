@@ -27,7 +27,7 @@ layers:
   - J
   - K
   - L
-  - .
+  - SV APOS
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD LEFT BRACKET AND LEFT BRACE))
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Z
