@@ -34,6 +34,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        volknob: volume_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_VOLUME_KNOB";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -58,13 +65,13 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC  &kp SV_Q             &kp SV_W               &kp SV_E           &kp SV_R           &kp SV_T                        &kp UP                &kp SV_Y   &kp SV_U            &kp SV_I            &kp SV_O                &kp SV_P                   &kp BSPC
-&none    &mt SV_A LEFT_SHIFT  &mt SV_S LEFT_CONTROL  &mt SV_D LEFT_ALT  &mt SV_F LEFT_GUI  &kp SV_G              &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &mt SV_J RIGHT_GUI  &mt SV_K RIGHT_ALT  &mt SV_L RIGHT_CONTROL  &mt SV_A_RING RIGHT_SHIFT  &kp SV_APOS
-&none    &kp SV_Z             &kp SV_X               &kp SV_C           &kp SV_V           &kp SV_B     &none              &kp DOWN              &kp SV_N   &kp SV_M            &kp SV_COMMA        &kp SV_DOT              &kp SV_O_UMLAUT            &kp SV_A_UMLAUT
-                                                     &none              &mo 2              &lt 1 SPACE                                           &kp ENTER  &lt 2 BSPC          &mo 3
+&kp ESC  &kp SV_Q             &kp SV_W               &kp SV_E           &kp SV_R           &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U            &kp SV_I            &kp SV_O                &kp SV_P                   &kp BSPC
+&none    &mt SV_A LEFT_SHIFT  &mt SV_S LEFT_CONTROL  &mt SV_D LEFT_ALT  &mt SV_F LEFT_GUI  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &mt SV_J RIGHT_GUI  &mt SV_K RIGHT_ALT  &mt SV_L RIGHT_CONTROL  &mt SV_A_RING RIGHT_SHIFT  &kp SV_APOS
+&none    &kp SV_Z             &kp SV_X               &kp SV_C           &kp SV_V           &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M            &kp SV_COMMA        &kp SV_DOT              &kp SV_O_UMLAUT            &kp SV_A_UMLAUT
+                                                     &none              &mo 2              &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC          &mo 3
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&volknob>;
         };
 
         Number_layer {
