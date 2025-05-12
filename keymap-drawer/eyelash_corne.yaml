@@ -35,7 +35,7 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD C))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD V))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD B))
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD N))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD M))
