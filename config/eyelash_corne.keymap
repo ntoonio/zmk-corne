@@ -42,6 +42,26 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
+
+        hml: homewrow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_LEFT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <45 46 47 36 37 8 9 10 11 12 23 24 25 26 27 37 38 39 40 41 7 22>;
+        };
+
+        hmr: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_RIGHT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 43 44>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -66,10 +86,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC  &kp SV_Q             &kp SV_W               &kp SV_E           &kp SV_R           &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U            &kp SV_I            &kp SV_O                &kp SV_P                   &kp BSPC
-&none    &mt SV_A LEFT_SHIFT  &mt SV_S LEFT_CONTROL  &mt SV_D LEFT_ALT  &mt SV_F LEFT_GUI  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &mt SV_J RIGHT_GUI  &mt SV_K RIGHT_ALT  &mt SV_L RIGHT_CONTROL  &mt SV_A_RING RIGHT_SHIFT  &kp SV_APOS
-&none    &kp SV_Z             &kp SV_X               &kp SV_C           &kp SV_V           &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M            &kp SV_COMMA        &kp SV_DOT              &kp SV_O_UMLAUT            &kp SV_A_UMLAUT
-                                                     &none              &mo 2              &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC          &mo 3
+&kp ESC  &kp SV_Q              &kp SV_W                &kp SV_E            &kp SV_R            &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U             &kp SV_I             &kp SV_O                 &kp SV_P                    &kp BSPC
+&none    &hml SV_A LEFT_SHIFT  &hml SV_S LEFT_CONTROL  &hml SV_D LEFT_ALT  &hml SV_F LEFT_GUI  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &hmr SV_J RIGHT_GUI  &hmr SV_K RIGHT_ALT  &hmr SV_L RIGHT_CONTROL  &hmr SV_A_RING RIGHT_SHIFT  &kp SV_APOS
+&none    &kp SV_Z              &kp SV_X                &kp SV_C            &kp SV_V            &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M             &kp SV_COMMA         &kp SV_DOT               &kp SV_O_UMLAUT             &kp SV_A_UMLAUT
+                                                       &none               &mo 2               &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC           &mo 3
             >;
 
             sensor-bindings = <&volknob>;
