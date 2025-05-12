@@ -87,7 +87,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp ESC  &kp SV_Q              &kp SV_W                &kp SV_E            &kp SV_R            &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U             &kp SV_I             &kp SV_O                 &kp SV_P                    &kp BSPC
-&none    &hml SV_A LEFT_SHIFT  &hml SV_S LEFT_CONTROL  &hml SV_D LEFT_ALT  &hml SV_F LEFT_GUI  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &hmr SV_J RIGHT_GUI  &hmr SV_K RIGHT_ALT  &hmr SV_L RIGHT_CONTROL  &hmr SV_A_RING RIGHT_SHIFT  &kp SV_APOS
+&none    &hml LEFT_SHIFT SV_A  &hml LEFT_CONTROL SV_S  &hml LEFT_ALT SV_D  &hml LEFT_GUI SV_F  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &hmr RIGHT_GUI SV_J  &hmr RIGHT_ALT SV_K  &hmr RIGHT_CONTROL SV_L  &hmr RIGHT_SHIFT SV_A_RING  &kp SV_APOS
 &none    &kp SV_Z              &kp SV_X                &kp SV_C            &kp SV_V            &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M             &kp SV_COMMA         &kp SV_DOT               &kp SV_O_UMLAUT             &kp SV_A_UMLAUT
                                                        &none               &mo 2               &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC           &mo 3
             >;
