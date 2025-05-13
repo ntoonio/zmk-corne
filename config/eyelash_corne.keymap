@@ -62,6 +62,14 @@
             tapping-term-ms = <100>;
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 43 44>;
         };
+
+        hue_encoder: hue_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+
+            label = "HUE_ENCODER";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -86,10 +94,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC  &kp SV_Q              &kp SV_W                &kp SV_E            &kp SV_R            &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U             &kp SV_I             &kp SV_O                 &kp SV_P                    &kp BSPC
-&none    &hml LEFT_SHIFT SV_A  &hml LEFT_CONTROL SV_S  &hml LEFT_ALT SV_D  &hml LEFT_GUI SV_F  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &hmr RIGHT_GUI SV_J  &hmr RIGHT_ALT SV_K  &hmr RIGHT_CONTROL SV_L  &hmr RIGHT_SHIFT SV_A_RING  &kp SV_APOS
-&none    &kp SV_Z              &kp SV_X                &kp SV_C            &kp SV_V            &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M             &kp SV_COMMA         &kp SV_DOT               &kp SV_O_UMLAUT             &kp SV_A_UMLAUT
-                                                       &none               &mo 2               &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC           &mo 3
+&kp ESC  &kp SV_Q            &kp SV_W                &kp SV_E              &kp SV_R            &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U             &kp SV_I               &kp SV_O                 &kp SV_P                  &kp BSPC
+&kp TAB  &hml LEFT_ALT SV_A  &hml LEFT_CONTROL SV_S  &hml LEFT_SHIFT SV_D  &hml LEFT_GUI SV_F  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &hmr RIGHT_GUI SV_J  &hmr RIGHT_SHIFT SV_K  &hmr RIGHT_CONTROL SV_L  &hmr RIGHT_ALT SV_A_RING  &kp SV_APOSTROPHE
+&none    &kp SV_Z            &kp SV_X                &kp SV_C              &kp SV_V            &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M             &kp SV_COMMA           &kp SV_DOT               &kp SV_O_UMLAUT           &kp SV_A_UMLAUT
+                                                     &mo 3                 &mo 2               &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC           &none
             >;
 
             sensor-bindings = <&volknob>;
@@ -98,10 +106,10 @@
         Number_layer {
             display-name = "NUMBER";
             bindings = <
-&none  &kp SV_N1       &kp SV_N2  &kp SV_N3  &kp SV_N4  &kp SV_N5                           &mmv MOVE_UP                     &kp SV_N6  &kp SV_N7  &kp SV_N8  &kp SV_N9  &kp SV_N0  &kp BSPC
-&none  &kp LEFT_SHIFT  &none      &none      &none      &none               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp HOME   &kp PG_UP
-&none  &none           &none      &none      &none      &none      &none                    &mmv MOVE_DOWN                   &none      &none      &none      &none      &kp END    &kp PG_DN
-                                  &trans     &trans     &trans                                                               &trans     &trans     &trans
+&none  &none  &none  &kp N1  &kp N2  &kp N3                           &mmv MOVE_UP                     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END            &none     &kp BSPC
+&none  &none  &none  &kp N4  &kp N5  &kp N6           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT          &none     &none
+&none  &none  &none  &kp N7  &kp N8  &kp N9  &none                    &mmv MOVE_DOWN                   &none     &kp RIGHT_GUI  &kp RSHFT    &kp RIGHT_CONTROL  &kp RALT  &none
+                     &trans  &kp N0  &trans                                                            &trans    &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -110,22 +118,22 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&none  &kp SV_EXCL  &kp SV_DOUBLE_QUOTES  &kp SV_HASH  &kp SV_EURO  &kp SV_PRCNT                           &mmv MOVE_UP                     &kp SV_AMPS   &kp SV_SLASH  &kp SV_LPAR  &kp SV_RPAR  &kp SV_RPAR  &kp BSPC
-&none  &none        &none                 &none        &none        &none                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SV_MINUS  &kp SV_EQUAL  &kp SV_LBRC  &kp SV_RBRC  &kp SV_BSLH  &kp SV_GRAVE
-&none  &none        &none                 &none        &none        &none         &none                    &mmv MOVE_DOWN                   &kp SV_UNDER  &kp SV_PLUS   &kp SV_LBKT  &kp SV_RBKT  &kp SV_PIPE  &kp SV_TILDE
-                                          &trans       &trans       &trans                                                                  &trans        &trans        &trans
+&none  &none  &none  &none   &none   &none                            &mmv MOVE_UP                     &kp SV_LEFT_BRACE  &kp SV_RIGHT_BRACE  &kp SV_LEFT_BRACKET  &kp SV_RIGHT_BRACKET  &kp SV_QUESTION  &kp BSPC
+&none  &none  &none  &none   &none   &none            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SV_PLUS        &kp SV_EQUAL        &kp SV_LESS_THAN     &kp SV_GREATER_THAN   &kp SV_BSLH      &kp SV_GRAVE
+&none  &none  &none  &none   &none   &none   &none                    &mmv MOVE_DOWN                   &kp SV_MINUS       &kp SV_UNDERSCORE   &kp SV_TILDE         &kp CARET             &kp SV_PIPE      &kp SV_ACUTE
+                     &trans  &trans  &trans                                                            &trans             &trans              &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
+        FUNCTIONS {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                           &mmv MOVE_UP                     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&none   &none   &none   &none   &none   &none            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none   &none   &none   &none    &none    &none
-&none   &none   &none   &none   &none   &none   &none                    &mmv MOVE_DOWN                   &none   &none   &none   &none    &none    &none
-                        &trans  &trans  &trans                                                            &trans  &trans  &trans
+&none  &none  &none  &none   &none   &none                            &mmv MOVE_UP                     &kp F1  &kp F2   &kp F3   &kp F4   &none  &none
+&none  &none  &none  &none   &none   &none            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none
+&none  &none  &none  &none   &none   &none   &none                    &mmv MOVE_DOWN                   &kp F9  &kp F10  &kp F11  &kp F12  &none  &none
+                     &trans  &trans  &trans                                                            &trans  &trans   &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -133,13 +141,13 @@
 
         Meta {
             bindings = <
-&bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                     &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR                    &none         &none   &none   &none   &none  &none  &none
-&none            &none            &none                            &none         &none         &none                  &none  &none  &none  &none   &none   &none   &none  &none  &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(0,100,50)  &none         &none         &out OUT_TOG  &none           &none         &none   &none   &none   &none  &none  &none
-                                                                   &trans        &trans        &trans                                      &trans  &trans  &trans
+&bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                     &bt BT_SEL 3                    &bt BT_SEL 4  &bt BT_CLR                    &none         &none   &none   &none   &none  &none  &none
+&none            &none            &none                            &none                           &none         &none                  &none  &none  &none  &none   &none   &none   &none  &none  &none
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(0,0,100)  &none         &out OUT_TOG  &none           &none         &none   &none   &none   &none  &none  &none
+                                                                   &trans                          &trans        &trans                                      &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&rgb_encoder>;
+            sensor-bindings = <&hue_encoder>;
         };
     };
 
