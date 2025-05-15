@@ -86,7 +86,49 @@
         tap-ms = <100>;
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        L_GUI {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <17 18>;
+        };
+
+        L_SHIFT {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <17 16>;
+        };
+
+        L_CTRL {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <16 15>;
+        };
+
+        L_ALT {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <15 14>;
+        };
+
+        R_GUI {
+            bindings = <&kp RIGHT_GUI>;
+            key-positions = <22 23>;
+        };
+
+        R_SHIFT {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <23 24>;
+        };
+
+        R_CTRL {
+            bindings = <&kp RIGHT_CONTROL>;
+            key-positions = <25 24>;
+        };
+
+        R_ALT {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <26 25>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -94,10 +136,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC  &kp SV_Q            &kp SV_W                &kp SV_E              &kp SV_R            &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U             &kp SV_I               &kp SV_O                 &kp SV_P                  &kp BSPC
-&kp TAB  &hml LEFT_ALT SV_A  &hml LEFT_CONTROL SV_S  &hml LEFT_SHIFT SV_D  &hml LEFT_GUI SV_F  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &hmr RIGHT_GUI SV_J  &hmr RIGHT_SHIFT SV_K  &hmr RIGHT_CONTROL SV_L  &hmr RIGHT_ALT SV_A_RING  &kp SV_APOSTROPHE
-&none    &kp SV_Z            &kp SV_X                &kp SV_C              &kp SV_V            &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M             &kp SV_COMMA           &kp SV_DOT               &kp SV_O_UMLAUT           &kp SV_A_UMLAUT
-                                                     &mo 3                 &mo 2               &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC           &none
+&kp ESC  &kp SV_Q  &kp SV_W  &kp SV_E  &kp SV_R  &kp SV_T                             &kp UP                &kp SV_Y   &kp SV_U    &kp SV_I      &kp SV_O    &kp SV_P         &kp BSPC
+&kp TAB  &kp SV_A  &kp SV_S  &kp SV_D  &kp SV_F  &kp SV_G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp SV_H   &kp SV_J    &kp SV_K      &kp SV_L    &kp SV_A_UMLAUT  &kp SV_APOSTROPHE
+&none    &kp SV_Z  &kp SV_X  &kp SV_C  &kp SV_V  &kp SV_B     &kp C_MUTE              &kp DOWN              &kp SV_N   &kp SV_M    &kp SV_COMMA  &kp SV_DOT  &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+                             &mo 3     &mo 2     &lt 1 SPACE                                                &kp ENTER  &lt 2 BSPC  &none
             >;
 
             sensor-bindings = <&volknob>;
