@@ -46,7 +46,7 @@ layers:
   - Fn
   - SYMBOL
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: RETURN, h: NUMBER}
   - {t: '$$mdi:backspace$$', h: SYMBOL}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   NUMBER:
@@ -95,7 +95,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '0', s: '='}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
