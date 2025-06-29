@@ -27,7 +27,7 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD J))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD K))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD L))
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD APOSTROPHE AND QUOTE))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD LEFT BRACKET AND LEFT BRACE))
   - ((ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE)))
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Z))
@@ -104,7 +104,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE))))
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND)))
   - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS)))
