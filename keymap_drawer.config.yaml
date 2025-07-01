@@ -110,6 +110,7 @@ draw_config:
   use_local_cache: true
 
 parse_config:
+  zmk_additional_includes: ["config/keys_sv.h"]
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
   trans_legend:
