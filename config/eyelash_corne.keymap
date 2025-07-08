@@ -29,14 +29,16 @@
 
 / {
     behaviors {
-        td0: td0 {
+        shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+
+            label = "SHIFT_CAPS";
         };
 
-        volknob: volume_encoder {
+        volume_encoder: volume_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_VOLUME_KNOB";
             #sensor-binding-cells = <0>;
@@ -69,6 +71,15 @@
             bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
 
             label = "HUE_ENCODER";
+        };
+
+        brightness_encoder: brightness_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_BRIGHTNESS_INC>, <&kp C_BRIGHTNESS_DEC>;
+
+            tap-ms = <100>;
+            label = "BRIGHTNESS_ENCODER";
         };
     };
 
@@ -142,7 +153,7 @@
                              &mo 3     &mo 2     &lt 1 SPACE                                                &lt 2 RETURN  &none     &none
             >;
 
-            sensor-bindings = <&volknob>;
+            sensor-bindings = <&volume_encoder>;
         };
 
         mods_layer {
@@ -172,13 +183,13 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&none  &none  &none  &none   &none   &none                            &mmv MOVE_UP                     &kp F1  &kp F2   &kp F3   &kp F4   &none  &none
-&none  &none  &none  &none   &none   &none            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none
-&none  &none  &none  &none   &none   &none   &none                    &mmv MOVE_DOWN                   &kp F9  &kp F10  &kp F11  &kp F12  &none  &none
-                     &trans  &trans  &trans                                                            &trans  &trans   &trans
+&none  &none  &none  &kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY                                           &mmv MOVE_UP                     &kp F1  &kp F2   &kp F3   &kp F4   &none  &none
+&none  &none  &none  &none           &none       &none                                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none
+&none  &none  &none  &none           &none       &none       &kp C_BRIGHTNESS_AUTO                    &mmv MOVE_DOWN                   &kp F9  &kp F10  &kp F11  &kp F12  &none  &none
+                     &trans          &trans      &trans                                                                                &trans  &trans   &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&brightness_encoder>;
         };
 
         Meta {
@@ -190,15 +201,6 @@
             >;
 
             sensor-bindings = <&hue_encoder>;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
         };
     };
 
