@@ -160,10 +160,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp LS(LA(LBRC))  &kp LS(LA(RBRC))  &kp RA(RS(N8))    &kp RS(RA(N9))       &kp SV_LEFT_PARENTHESIS  &kp SV_RIGHT_PARENTHESIS                           &mmv MOVE_UP                     &kp SV_N1  &kp SV_N2  &kp SV_N3  &kp SV_GRAVE  &kp SV_ACUTE  &kp BSPC
-&none             &kp SV_EQUAL      &kp SV_LESS_THAN  &kp SV_GREATER_THAN  &kp SV_LEFT_BRACKET      &kp SV_RIGHT_BRACKET               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SV_N4  &kp SV_N5  &kp SV_N6  &none         &none         &none
-&kp PIPE          &kp SV_BACKSLASH  &kp SV_SLASH      &kp SV_STAR          &kp SV_MINUS             &kp SV_PLUS               &none                    &mmv MOVE_DOWN                   &kp SV_N7  &kp SV_N8  &kp SV_N9  &none         &none         &none
-                                                      &trans               &trans                   &trans                                                                              &trans     &kp SV_N0  &trans
+&none         &none             &kp RA(RS(N8))    &kp RS(RA(N9))       &kp SV_LEFT_PARENTHESIS  &kp SV_RIGHT_PARENTHESIS                           &mmv MOVE_UP                     &kp SV_N1  &kp SV_N2  &kp SV_N3  &kp SV_GRAVE  &kp SV_ACUTE  &kp BSPC
+&kp SV_CARET  &kp SV_EQUAL      &kp SV_LESS_THAN  &kp SV_GREATER_THAN  &kp SV_LEFT_BRACKET      &kp SV_RIGHT_BRACKET               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SV_N4  &kp SV_N5  &kp SV_N6  &none         &none         &none
+&kp PIPE      &kp SV_BACKSLASH  &kp SV_SLASH      &kp SV_STAR          &kp SV_MINUS             &kp SV_PLUS               &none                    &mmv MOVE_DOWN                   &kp SV_N7  &kp SV_N8  &kp SV_N9  &none         &none         &none
+                                                  &trans               &trans                   &trans                                                                              &trans     &kp SV_N0  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -190,6 +190,15 @@
             >;
 
             sensor-bindings = <&hue_encoder>;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 
