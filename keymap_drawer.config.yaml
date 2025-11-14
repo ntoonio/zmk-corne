@@ -259,8 +259,12 @@ parse_config:
 
   # ZMK
   zmk_keycode_map:
-    "A_RING": "Å2"
-    "A RING": "Å1"
+    # Custom added
+    "A_RING": "Å"
+    "A_UMLAUT": "Å"
+    "O_UMLAUT": "Ö"
+    RIGHT_GUI: $$mdi:apple-keyboard-command$$
+    
     # Symbols
     EXCLAMATION: "!"
     EXCL: "!"
