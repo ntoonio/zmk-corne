@@ -4,6 +4,10 @@ on:
   push:
     paths-ignore:
       - "keymap-drawer/**"
+      - ".gitignore"
+      - "README.md"
+      - "keymap_drawer.config.yaml"
+      - ".github/**"
 
 jobs:
   build:
