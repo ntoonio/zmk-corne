@@ -259,6 +259,8 @@ parse_config:
 
   # ZMK
   zmk_keycode_map:
+    "A_RING": "Å2"
+    "A RING": "Å1"
     # Symbols
     EXCLAMATION: "!"
     EXCL: "!"
