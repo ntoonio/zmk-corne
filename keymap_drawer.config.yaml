@@ -1,5 +1,4 @@
 draw_config:
-  zmk_remove_keycode_prefix: ["SV_"]
   n_columns: 1
   draw_key_sides: true
   key_w: 60.0
@@ -111,6 +110,7 @@ draw_config:
   use_local_cache: true
 
 parse_config:
+  zmk_remove_keycode_prefix: ["SV_"]
   zmk_additional_includes: ["config/keys_sv.h"]
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
