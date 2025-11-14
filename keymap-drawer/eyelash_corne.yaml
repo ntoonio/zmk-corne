@@ -10,10 +10,10 @@ layers:
   - $$mdi:arrow-up-bold$$
   - SV Y
   - SV U
-  - I
-  - O
-  - P
-  - A_RING
+  - SV I
+  - SV O
+  - SV P
+  - SV A RING
   - $$mdi:keyboard-tab$$
   - SV A
   - SV S
@@ -27,8 +27,8 @@ layers:
   - SV J
   - SV K
   - SV L
-  - O_UMLAUT
-  - A_UMLAUT
+  - SV O UMLAUT
+  - SV A UMLAUT
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - SV Z
   - SV X
@@ -109,15 +109,15 @@ layers:
   - SV 1
   - SV 2
   - SV 3
-  - GRAVE
-  - ACUTE
+  - SV GRAVE
+  - SV ACUTE
   - {t: '$$mdi:backspace$$', type: backspace}
   - SV CARET
   - SV EQUAL
-  - LESS_THAN
-  - GREATER_THAN
-  - LEFT_BRACKET
-  - RIGHT_BRACKET
+  - SV LESS THAN
+  - SV GREATER THAN
+  - SV LEFT BRACKET
+  - SV RIGHT BRACKET
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
