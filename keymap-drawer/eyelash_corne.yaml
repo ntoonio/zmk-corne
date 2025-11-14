@@ -2,46 +2,46 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-esc$$
-  - SV Q
-  - SV W
-  - SV E
-  - SV R
-  - SV T
+  - Q
+  - W
+  - E
+  - R
+  - T
   - $$mdi:arrow-up-bold$$
-  - SV Y
-  - SV U
-  - SV I
-  - SV O
-  - SV P
-  - SV A RING
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A RING
   - $$mdi:keyboard-tab$$
-  - SV A
-  - SV S
-  - SV D
-  - SV F
-  - SV G
+  - A
+  - S
+  - D
+  - F
+  - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - SV H
-  - SV J
-  - SV K
-  - SV L
-  - SV O UMLAUT
-  - SV A UMLAUT
+  - H
+  - J
+  - K
+  - L
+  - O UMLAUT
+  - A UMLAUT
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - SV Z
-  - SV X
-  - SV C
-  - SV V
-  - SV B
+  - Z
+  - X
+  - C
+  - V
+  - B
   - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
-  - SV N
-  - SV M
-  - SV COMMA
-  - SV DOT
-  - SV APOSTROPHE
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - <
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Fn
   - SYMBOL
@@ -80,10 +80,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - SV CARET
-  - SV TILDE
-  - SV QUESTION
-  - SV UNDERSCORE
+  - ^
+  - '~'
+  - '?'
+  - _
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: RIGHT GUI, h: '$$mdi:gesture-tap-hold$$'}
@@ -101,43 +101,43 @@ layers:
   SYMBOL:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - SV LEFT BRACE
-  - SV RIGHT BRACE
-  - SV LEFT PARENTHESIS
-  - SV RIGHT PARENTHESIS
+  - '{'
+  - '}'
+  - (
+  - )
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - SV 1
-  - SV 2
-  - SV 3
-  - SV GRAVE
-  - SV ACUTE
+  - {t: '1', s: '!'}
+  - {t: '2', s: '"'}
+  - {t: '3', s: '#'}
+  - {t: '`', s: '~'}
+  - ACUTE
   - {t: '$$mdi:backspace$$', type: backspace}
-  - SV CARET
-  - SV EQUAL
-  - SV LESS THAN
-  - SV GREATER THAN
-  - SV LEFT BRACKET
-  - SV RIGHT BRACKET
+  - ^
+  - {t: '=', s: +}
+  - <
+  - '>'
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - SV 4
-  - SV 5
-  - SV 6
+  - {t: '4', s: €}
+  - {t: '5', s: '%'}
+  - {t: '6', s: '&'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '|'
-  - SV BACKSLASH
-  - SV PLUS
-  - SV STAR
-  - SV SLASH
-  - SV MINUS
+  - {t: \, s: '|'}
+  - +
+  - '*'
+  - {t: /, s: '?'}
+  - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - SV 7
-  - SV 8
-  - SV 9
+  - {t: '7', s: /}
+  - {t: '8', s: (}
+  - {t: '9', s: )}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -145,7 +145,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - SV 0
+  - {t: '0', s: '='}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
