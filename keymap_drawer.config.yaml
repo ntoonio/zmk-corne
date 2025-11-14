@@ -1,4 +1,5 @@
 draw_config:
+  zmk_remove_keycode_prefix: ["SV_"]
   n_columns: 1
   draw_key_sides: true
   key_w: 60.0
