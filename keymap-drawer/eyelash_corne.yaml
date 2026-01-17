@@ -48,12 +48,12 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: MOD}
   - {t: RETURN, h: SYMBOL}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Meta
   MOD:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '?'
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -80,10 +80,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ^
-  - '~'
-  - '?'
-  - _
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
@@ -99,54 +99,54 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - ACUTE
+  - {t: '`', s: '~'}
   - '{'
-  - '}'
   - (
+  - '}'
   - )
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - +
   - {t: '1', s: '!'}
   - {t: '2', s: '"'}
   - {t: '3', s: '#'}
-  - {t: '`', s: '~'}
   - ACUTE
   - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - ^
-  - {t: '=', s: +}
   - <
-  - '>'
   - {t: '[', s: '{'}
+  - '>'
   - {t: ']', s: '}'}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - {t: '-', s: _}
   - {t: '4', s: €}
   - {t: '5', s: '%'}
   - {t: '6', s: '&'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '~'
   - '|'
-  - {t: \, s: '|'}
-  - +
-  - '*'
-  - {t: /, s: '?'}
-  - {t: '-', s: _}
+  - {t: /, s: \}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '*'
   - {t: '7', s: /}
   - {t: '8', s: (}
   - {t: '9', s: )}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ., s: '>'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '0', s: '='}
-  - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -197,12 +197,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Meta:
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - $$mdi:bluetooth-off$$
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -239,12 +239,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {type: held}
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
 combos:
 - p: [17, 18]
   k: $$mdi:apple-keyboard-command$$
