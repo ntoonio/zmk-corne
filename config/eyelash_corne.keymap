@@ -40,6 +40,8 @@
             label = "ENCODER_VOLUME_KNOB";
             #sensor-binding-cells = <0>;
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+
+            tap-ms = <5>;
         };
 
         hml: homewrow_mods_left {
